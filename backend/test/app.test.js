@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app');
+const {app, server} = require('../app');
 
 describe('GET /', () => {
     it('should return 200 status and the correct message', async () => {
@@ -9,6 +9,6 @@ describe('GET /', () => {
     })
 })
 
-afterAll((done) => {
-    app.close()
-});
+afterAll(() => {
+    server.close();
+})
