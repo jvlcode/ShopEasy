@@ -8,3 +8,7 @@ describe('GET /', () => {
         expect(response.text).toBe("Welcome to ShopEasy!");
     })
 })
+
+afterAll((done) => {
+    app.close()
+});
